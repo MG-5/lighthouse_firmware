@@ -12,7 +12,7 @@
             "executable": "${workspaceFolderBasename}.elf",
             "serverpath": "JLinkGDBServer",
             "servertype": "jlink",
-            "device": "stm32f103c8",
+            "device": "STM32L072KB",
             "interface": "swd",
             "runToEntryPoint": "main"
         },
@@ -24,7 +24,7 @@
             "executable": "${workspaceFolderBasename}.elf",
             "serverpath": "JLinkGDBServer",
             "servertype": "jlink",
-            "device": "stm32f103c8",
+            "device": "STM32L072KB",
             "interface": "swd",
             "rtos": "FreeRTOS",
             "runToEntryPoint": "main"
@@ -37,7 +37,7 @@
             "executable": "${workspaceFolderBasename}.elf",
             "serverpath": "JLinkGDBServer",
             "servertype": "jlink",
-            "device": "stm32f103c8",
+            "device": "STM32L072KB",
             "interface": "swd",
             "rtos": "FreeRTOS"
         },
@@ -48,7 +48,7 @@
             "cwd": "${command:cmake.buildDirectory}",
             "executable": "${workspaceFolderBasename}.elf",
             "servertype": "stutil",
-            "device": "stm32f103c8",
+            "device": "STM32L072KB",
             "runToEntryPoint": "main"
         }
     ]

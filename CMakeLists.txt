@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22)
-set(CMAKE_PROJECT_NAME nixie-vfd-clock_firmware)
+set(CMAKE_PROJECT_NAME lighthouse)
 
 # Setup compiler settings
 set(CMAKE_C_STANDARD 11)
@@ -10,8 +10,6 @@ set(CMAKE_CXX_STANDARD 20)
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Debug")
 endif()
-
-
 
 # Add custom compiler flags, will also add flags to C++ compiler
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-unused-parameter")
@@ -44,23 +42,13 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 )
 
 add_subdirectory(src/util)
-add_subdirectory(src/LED/gcem)
+add_subdirectory(src/gcem)
 
 # Add sources to executable
 target_sources(
     ${CMAKE_PROJECT_NAME} PRIVATE    
     src/Application.cxx
-
-    src/clock/Clock.cxx
-
-    src/LED/AddressableLedDriver.cxx
-    src/LED/LightController.cxx
-
-    src/tube-control/TubeControl.cxx
-    src/tube-control/nixie/Nixie.cxx
-    src/tube-control/vfd/VFD.cxx
-
-    src/esp_gateway/PacketProcessor.cxx
+    src/Leds.cxx
 )
 
 # Add include paths

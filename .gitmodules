@@ -1,0 +1,12 @@
+[submodule "core"]
+	path = core
+	url = git@github.com:MG-5/core
+	branch = main
+[submodule "src/util"]
+	path = src/util
+	url = git@github.com:MG-5/util
+	branch = stm32
+[submodule "gcem"]
+	path = src/gcem
+	url = git@github.com:kthohr/gcem.git
+	branch = master
