@@ -25,9 +25,10 @@ void Leds::fillSineArray()
     constexpr auto DiffBetweenLeds =
         static_cast<size_t>(std::numbers::pi * 2 * 1000 / (NumberOfLeds));
 
-    for (size_t i = 0; i < sineBrightness.size(); i++)
+    for (size_t i = 0; i < NumberOfLeds; i++)
     {
-        const auto LedPosition = (i * DiffBetweenLeds + circlePointer) % SineTableSize;
+        const auto LedPosition =
+            ((NumberOfLeds - i) * DiffBetweenLeds + circlePointer) % SineTableSize;
         const size_t Brightness = SineLUT[LedPosition] < 0 ? 0 : SineLUT[LedPosition];
 
         sineBrightness[i] = Brightness;
