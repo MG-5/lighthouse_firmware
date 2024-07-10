@@ -52,5 +52,5 @@ void Leds::setLedBrightness(uint8_t ledIndex, size_t newBrightness)
 
     auto &timerAndChannel = LedTimersAndChannels[ledIndex];
     __HAL_TIM_SET_COMPARE(timerAndChannel.first, timerAndChannel.second,
-                          GammaCorrectionLUT[newBrightness] / 4);
+                          GammaCorrectionLUT[newBrightness]);
 }
